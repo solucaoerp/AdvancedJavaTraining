@@ -2,6 +2,8 @@ package com.ibrplanner.events.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +16,10 @@ public class Atividade {
     private String nome;
     private String descricao;
     private Double preco;
+
+    @ManyToMany
+    @JoinTable(name = "atividade_participante", joinColumns = @JoinColumn(name = "atividade_id"), inverseJoinColumns = @JoinColumn(name = "participante_id"))
+    private List<Participante> participantes = new ArrayList<>();
 
     public Atividade() {
     }
@@ -70,5 +76,13 @@ public class Atividade {
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
+    }
+
+    public List<Participante> getParticipantes() {
+        return participantes;
+    }
+
+    public void setParticipantes(List<Participante> participantes) {
+        this.participantes = participantes;
     }
 }
