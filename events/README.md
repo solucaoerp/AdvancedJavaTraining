@@ -51,11 +51,7 @@ Navegue até o diretório do projeto 'events':
 cd AdvancedJavaTraining/events
 ```
 
-E então execute o comando:
-
-```sh
-mvn spring-boot:run
-```
+E execute o projeto através da sua IDE escolhida...
 
 ## Acessando H2 Database
 
