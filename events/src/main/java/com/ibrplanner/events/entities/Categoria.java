@@ -2,6 +2,8 @@ package com.ibrplanner.events.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +14,9 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descricao;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Atividade> atividades = new ArrayList<>();
 
     public Categoria() {
     }
@@ -50,5 +55,13 @@ public class Categoria {
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
+    }
+
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+
+    public void setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
     }
 }

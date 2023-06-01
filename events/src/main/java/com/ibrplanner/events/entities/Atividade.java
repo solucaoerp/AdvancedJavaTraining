@@ -18,8 +18,14 @@ public class Atividade {
     private Double preco;
 
     @ManyToMany
-    @JoinTable(name = "atividade_participante", joinColumns = @JoinColumn(name = "atividade_id"), inverseJoinColumns = @JoinColumn(name = "participante_id"))
+    @JoinTable(name = "atividade_participante",
+            joinColumns = @JoinColumn(name = "atividade_id"),
+            inverseJoinColumns = @JoinColumn(name = "participante_id"))
     private List<Participante> participantes = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
 
     public Atividade() {
     }
@@ -84,5 +90,13 @@ public class Atividade {
 
     public void setParticipantes(List<Participante> participantes) {
         this.participantes = participantes;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
