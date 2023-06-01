@@ -1,10 +1,16 @@
 package com.ibrplanner.events.entities;
 
+import jakarta.persistence.*;
+
 import java.time.Instant;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_bloco")
 public class Bloco {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Instant inicio;
     private Instant fim;
