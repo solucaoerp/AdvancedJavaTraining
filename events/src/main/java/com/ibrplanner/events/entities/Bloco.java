@@ -15,6 +15,10 @@ public class Bloco {
     private Instant inicio;
     private Instant fim;
 
+    @ManyToOne
+    @JoinColumn(name = "atividade_id")
+    private Atividade atividade;
+
     public Bloco() {
     }
 
@@ -61,5 +65,13 @@ public class Bloco {
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
+    }
+
+    public Atividade getAtividade() {
+        return atividade;
+    }
+
+    public void setAtividade(Atividade atividade) {
+        this.atividade = atividade;
     }
 }
