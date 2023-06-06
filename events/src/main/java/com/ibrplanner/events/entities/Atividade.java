@@ -18,7 +18,7 @@ public class Atividade {
     private Double preco;
 
     @ManyToMany
-    @JoinTable(name = "atividade_participante",
+    @JoinTable(name = "tb_atividade_participante",
             joinColumns = @JoinColumn(name = "atividade_id"),
             inverseJoinColumns = @JoinColumn(name = "participante_id"))
     private List<Participante> participantes = new ArrayList<>();

@@ -7,31 +7,33 @@
 
 ## Índice
 
+- [Índice](#índice)
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Pré-requisitos](#pré-requisitos)
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Instalação](#instalação)
-- [Acessando H2 Database](#acessando-h2-database) 
+- [Acessando H2 Database](#acessando-h2-database)
 - [Contribuição](#contribuição)
 - [Contato](#contato)
 - [Licença](#licença)
 
 ## Sobre o Projeto
 
-Este é um projeto Spring Boot que oferece uma maneira de gerenciar as informações dos participantes das atividades de um evento acadêmico. Ele abrange a gestão de atividades (como palestras, cursos, oficinas práticas) e de participantes (nome e e-mail).
+Este é um projeto `Java` com `Spring Boot` que oferece uma maneira de gerenciar as informações dos participantes e das atividades de um Evento Acadêmico. Inicialmente, o projeto abrange o mapeamento das entidades de domínio conforme diagrama, e o `Seeding` que refere-se ao processo de preenchimento do Banco de Dados, com os dados iniciais, ou dados padrões.
 
 ## Pré-requisitos
 
-Antes de iniciar, assegure-se que você tenha o ambiente Java corretamente configurado em sua máquina. Abaixo a relação das tecnologias utilizadas no desenvolvimento do projeto.
+Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em sua máquina. Abaixo a relação das tecnologias utilizadas no desenvolvimento do projeto.
 
-- Java 17.0.4
-- Spring Boot 3.1.0
-- Banco de dados H2
-- IntelliJ IDEA 2023.1.2 (Community Edition)
+- Sistema Operacional: Windows 11
+- [JDK com Java 17 LTS](https://www.azul.com/downloads/?version=java-17-lts&os=windows&architecture=x86-64-bit&package=jdk#zulu)
+- [Spring Boot 3.1.0](https://start.spring.io/)
+- Banco de dados H2: configurado via dependência `pom.xml`
+- [IntelliJ IDEA 2023.1.2 (Community Edition)](https://www.jetbrains.com/idea/download/other.html)
 
 ## Diagrama de Classes
 
-Para entender a estrutura básica do projeto, consulte o diagrama de classes. O diagrama fornece uma visão geral das entidades do projeto e suas relações.
+Para entender a estrutura básica do projeto, consulte o diagrama de classes abaixo. O diagrama fornece uma visão geral das entidades do projeto e suas relações.
 
 <div align="center">
   <img src="https://github.com/solucaoerp/AdvancedJavaTraining/blob/main/events/assets/image/use-case-diagram.png" alt="Diagrama de Classes">
@@ -45,19 +47,17 @@ Clone o repositório do Github:
 git clone https://github.com/solucaoerp/AdvancedJavaTraining.git
 ```
 
-Navegue até o diretório do projeto 'events':
+Através de sua IDE, navegue até o diretório do projeto `events`, baixe as dependências e execute o projeto:
 
 ```sh
 cd AdvancedJavaTraining/events
 ```
 
-E execute o projeto através da sua IDE escolhida...
-
 ## Acessando H2 Database
 
-Acesse o console H2 através do seguinte link no seu navegador: http://localhost:8080/h2-console
+Para acessar o console H2, digite o endereço `http://localhost:8080/h2-console` em seu navegador de internet.
 
-A imagem abaixo mostra a tela de login do H2 Database:
+Na imagem abaixo você encontra as credenciais de acesso. Essas informações também podem ser encontradas no perfil de `test` na pasta `resources`. 
 
 <div align="center">
   <img src="https://github.com/solucaoerp/AdvancedJavaTraining/blob/main/events/assets/image/h2-database.png" alt="Tela de Login do H2 Database">
@@ -75,7 +75,7 @@ Caso queira contribuir para este projeto, siga os seguintes passos:
 
 ## Contato
 
-Se você tiver alguma dúvida relacionado ao projeto, entre em contato através do e-mail: solucao.erp@gmail.com.
+Se você tiver alguma dúvida relacionada ao projeto, entre em contato através do e-mail: solucao.erp@gmail.com.
 
 ## Licença
 
