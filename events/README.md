@@ -19,7 +19,7 @@
 
 ## Sobre o Projeto
 
-Este é um projeto `Java` com `Spring Boot` que oferece uma maneira de gerenciar as informações dos participantes e das atividades de um Evento Acadêmico. Inicialmente, o projeto abrange o mapeamento das entidades de domínio conforme diagrama, e o `Seeding` que refere-se ao processo de preenchimento do Banco de Dados, com os dados iniciais, ou dados padrões.
+Este é um projeto `Java` com `Spring Boot` que oferece uma maneira de gerenciar as informações dos participantes e das atividades de um Evento Acadêmico. Inicialmente o projeto abrange o mapeamento das entidades de domínio conforme diagrama, e o `Seeding` que refere-se ao processo de preenchimento do Banco de Dados com os dados iniciais, ou dados padrões.
 
 ## Pré-requisitos
 

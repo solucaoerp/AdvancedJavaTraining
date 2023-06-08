@@ -20,7 +20,7 @@
 
 ## Sobre o Projeto
 
-DSCommerce é um sistema de comércio eletrônico desenvolvido em Java utilizando o framework `Spring Boot (v3.1.0)` com banco de dados `H2 (v2.1.214)`.
+Este é um projeto `Java` com `Spring Boot` que oferece uma maneira de gerenciar as informações de um sistema de comércio eletrônico.  Inicialmente o projeto abrange o mapeamento das entidades de domínio conforme diagrama, e o `Seeding` que refere-se ao processo de preenchimento do Banco de Dados com os dados iniciais, ou dados padrões.
 
 ### Recursos
 
