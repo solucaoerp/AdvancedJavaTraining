@@ -36,4 +36,19 @@ public class ProductService {
         // conversao com LAMBDA Expression
         return products.map(x -> new ProductDTO(x));
     }
+
+    @Transactional
+    public ProductDTO insert(ProductDTO dto) {
+
+        Product entity = new Product();
+        entity.setName(dto.getName());
+        entity.setDescription(dto.getDescription());
+        entity.setPrice(dto.getPrice());
+        entity.setImgUrl(dto.getImgUrl());
+
+        entity = productRepository.save(entity);
+
+        // Devolve-se o DTO
+        return new ProductDTO(entity);
+    }
 }
