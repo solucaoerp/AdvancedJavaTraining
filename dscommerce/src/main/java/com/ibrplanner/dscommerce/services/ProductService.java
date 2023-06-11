@@ -3,13 +3,12 @@ package com.ibrplanner.dscommerce.services;
 import com.ibrplanner.dscommerce.dtos.ProductDTO;
 import com.ibrplanner.dscommerce.entities.Product;
 import com.ibrplanner.dscommerce.repositories.ProductRepository;
+import com.ibrplanner.dscommerce.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -23,10 +22,8 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public ProductDTO findById(Long id) {
-        Optional<Product> result = productRepository.findById(id);
-        Product product = result.get();
-        ProductDTO dto = new ProductDTO(product); // Converte o Objeto para DTO (feito no Constructor do DTO)
-        return dto;
+        Product product = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
+        return new ProductDTO(product);
     }
 
     @Transactional(readOnly = true)
