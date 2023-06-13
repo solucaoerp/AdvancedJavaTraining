@@ -4,12 +4,19 @@
 
 Este repositório é um espaço dedicado ao estudo de desenvolvimento de softwares utilizando a linguagem `Java` e o framework `Spring Boot`. Aqui você encontrará protótipos de projetos e ferramentas úteis, tudo organizado de forma clara e concisa.
 
-## Estrutura do Repositório
+## Explorando o Repositório
 
-Aqui você encontra diversos desafios práticos. São exercícios que proporcionam a oportunidade de consolidar o aprendizado teórico através de aplicações realistas. Navegue pelos subdiretórios e descubra o que foi estudado em cada projeto.
+Aqui você encontra diversos desafios práticos. São exercícios que proporcionam a oportunidade de consolidar o aprendizado teórico através de aplicações realistas. Navegue pelos subdiretórios e descubra o que foi estudado em cada projeto. Ele está repleto de projetos que propõem desafios práticos e demonstram a implementação de conceitos teóricos. Cada subdiretório abriga um projeto individual, onde cada um reflete um aspecto específico da programação avançada em Java.
 
-- [events](https://github.com/solucaoerp/AdvancedJavaTraining/tree/main/events): `Sistema EVENTO`.
-- [dscommerce](https://github.com/solucaoerp/AdvancedJavaTraining/tree/main/dscommerce): `Sistema de Comércio Eletrônico`.
+Navegue pelos seguintes projetos para ampliar sua compreensão e aplicação prática desses conceitos:
+
+- [events](https://github.com/solucaoerp/AdvancedJavaTraining/tree/main/events): Este projeto, nomeado `Sistema EVENTO`, lida com a organização e gestão de eventos. Através deste sistema, você pode explorar como gerenciar eventos e suas complexidades correlatas, além das técnicas aplicadas na codificação.
+
+- [dscommerce](https://github.com/solucaoerp/AdvancedJavaTraining/tree/main/dscommerce): Este é o `Sistema de Comércio Eletrônico`, um protótipo inicial de uma plataforma de comércio eletrônico, e os aspectos técnicos no desenvolvimento de um software deste nível, dentre os quais, o relacionamentos entre as entidades de domínio.
+
+- [customers](https://github.com/solucaoerp/AdvancedJavaTraining/tree/main/customers): Introduzimos o projeto `CRUD de Clientes`, que demonstra uma implementação elegante de operações CRUD usando Spring Boot. Este projeto é uma aplicação de gerenciamento de clientes, oferecendo uma experiência prática no manuseio de operações de banco de dados como inserção, consulta, atualização e exclusão de registros de clientes.
+
+Aproveite o tempo para explorar esses projetos. Eles oferecem uma excelente oportunidade para consolidar seus conhecimentos em Java com Spring Boot.
 
 ## Reconhecimento
 
