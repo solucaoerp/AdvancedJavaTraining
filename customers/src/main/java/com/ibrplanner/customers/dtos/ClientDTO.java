@@ -1,7 +1,9 @@
 package com.ibrplanner.customers.dtos;
 
+import com.ibrplanner.customers.entities.Client;
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.beans.BeanUtils;
 
 import java.time.LocalDate;
 
@@ -25,7 +27,9 @@ public class ClientDTO {
     @Min(0)
     private Integer children;
 
-    public ClientDTO() {
+    // Utilizado para converter o Objeto em DTO no Service (findAll, )
+    public ClientDTO(Client client) {
+        BeanUtils.copyProperties(client, this);
     }
 
     public ClientDTO(String name, String cpf, @NotNull Double income, @NotNull LocalDate birthDate, @NotNull Integer children) {
