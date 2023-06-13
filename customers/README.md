@@ -67,14 +67,14 @@ Essas operações compõem a base funcional do sistema, fornecendo uma interface
 
 Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em sua máquina. Abaixo você tem a relação das tecnologias que foram utilizadas no processo de desenvolvimento do projeto.
 
-| Tecnologia                  | Versão              | Logo |
+| Tecnologia                  | Versão              | Logo / Link |
 | --------------------------- | ------------------- | ---- |
-| Sistema Operacional         | Windows 11          | [![Windows](assets/image/icon48-windows.png)](https://www.microsoft.com/pt-br/windows/windows-11?r=1) |
-| Linguagem de Programação (JDK) | Java 17 LTS (Azul Zulu) | [![Java](assets/image/icon48_java.png)](https://www.azul.com/downloads/?package=jdk#zulu) |
-| Framework                   | Spring Boot 3.1.0   | [![Spring](assets/image/icon48_spring.png)](https://spring.io/projects/spring-boot) |
-| Banco de Dados              | H2 Database         | [![H2 Database](assets/image/icon48_h2database.png)](https://www.h2database.com/html/main.html) |
-| IDE                         | IntelliJ IDEA 2023.1.2 (Community Edition) | [![IntelliJ IDEA](assets/image/icon48-intellij.png)](https://www.jetbrains.com/idea/download/other.html) |
-| Ferramenta de Teste de API  | Postman v10.14.9    | [![Postman](assets/image/icon48-postman.png)](https://www.postman.com/downloads/) |
+| Sistema Operacional         | Windows 11          | [![Windows](assets/image/icon38-windows.png)](https://www.microsoft.com/pt-br/windows/windows-11?r=1) |
+| Linguagem de Programação (JDK) | Java 17 LTS (Azul Zulu) | [![Java](assets/image/icon38_java.png)](https://www.azul.com/downloads/?package=jdk#zulu) |
+| Framework                   | Spring Boot 3.1.0   | [![Spring](assets/image/icon38_spring.png)](https://spring.io/projects/spring-boot) |
+| Banco de Dados              | H2 Database         | [![H2 Database](assets/image/icon38_h2database.png)](https://www.h2database.com/html/main.html) |
+| IDE                         | IntelliJ IDEA 2023.1.2 (Community Edition) | [![IntelliJ IDEA](assets/image/icon38-intellij.png)](https://www.jetbrains.com/idea/download/other.html) |
+| Ferramenta de Teste de API  | Postman v10.14.9    | [![Postman](assets/image/icon38-postman.png)](https://www.postman.com/downloads/) |
 
 Para instalar e executar este projeto, você precisa ter os **pré-requisitos acima** instalados em seu ambiente de desenvolvimento.
 
