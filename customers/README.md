@@ -8,6 +8,7 @@
 - [Sobre o Projeto](#sobre-o-projeto)
   - [Principais Funcionalidades](#principais-funcionalidades)
 - [Tecnologias](#tecnologias)
+- [Tecnologias](#tecnologias-1)
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Ambientes de Execução](#ambientes-de-execução)
 - [Arquitetura e Camadas](#arquitetura-e-camadas)
@@ -67,14 +68,20 @@ Essas operações compõem a base funcional do sistema, fornecendo uma interface
 
 Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em sua máquina. Abaixo você tem a relação das tecnologias que foram utilizadas no processo de desenvolvimento do projeto.
 
+## Tecnologias
+
+Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em sua máquina. Abaixo você tem a relação das tecnologias que foram utilizadas no processo de desenvolvimento do projeto.
+
 | Tecnologia                  | Versão              | Logo / Link |
-| --------------------------- | ------------------- | ---- |
-| Sistema Operacional         | Windows 11          | [![Windows](assets/image/icon38-windows.png)](https://www.microsoft.com/pt-br/windows/windows-11?r=1) |
-| Linguagem de Programação (JDK) | Java 17 LTS (Azul Zulu) | [![Java](assets/image/icon38_java.png)](https://www.azul.com/downloads/?package=jdk#zulu) |
-| Framework                   | Spring Boot 3.1.0   | [![Spring](assets/image/icon38_spring.png)](https://spring.io/projects/spring-boot) |
-| Banco de Dados              | H2 Database         | [![H2 Database](assets/image/icon38_h2database.png)](https://www.h2database.com/html/main.html) |
-| IDE                         | IntelliJ IDEA 2023.1.2 (Community Edition) | [![IntelliJ IDEA](assets/image/icon38-intellij.png)](https://www.jetbrains.com/idea/download/other.html) |
-| Ferramenta de Teste de API  | Postman v10.14.9    | [![Postman](assets/image/icon38-postman.png)](https://www.postman.com/downloads/) |
+| --------------------------- | ------------------- | :---------: |
+| Sistema Operacional         | Windows 11          | <p align="center"><a href="https://www.microsoft.com/pt-br/windows/windows-11?r=1"><img src="assets/image/icon38-windows.png" alt="Windows"></a></p> |
+| Linguagem de Programação (JDK) | Java 17 LTS (Azul Zulu) | <p align="center"><a href="https://www.azul.com/downloads/?package=jdk#zulu"><img src="assets/image/icon38_java.png" alt="Java"></a></p> |
+| Framework                   | Spring Boot 3.1.0   | <p align="center"><a href="https://spring.io/projects/spring-boot"><img src="assets/image/icon38_spring.png" alt="Spring"></a></p> |
+| Banco de Dados              | H2 Database         | <p align="center"><a href="https://www.h2database.com/html/main.html"><img src="assets/image/icon38_h2database.png" alt="H2 Database"></a></p> |
+| IDE                         | IntelliJ IDEA 2023.1.2 (Community Edition) | <p align="center"><a href="https://www.jetbrains.com/idea/download/other.html"><img src="assets/image/icon38-intellij.png" alt="IntelliJ IDEA"></a></p> |
+| Ferramenta de Teste de API  | Postman v10.14.9    | <p align="center"><a href="https://www.postman.com/downloads/"><img src="assets/image/icon38-postman.png" alt="Postman"></a></p> |
+
+Para instalar e executar este projeto, você precisa ter os **pré-requisitos acima** instalados em seu ambiente de desenvolvimento.
 
 Para instalar e executar este projeto, você precisa ter os **pré-requisitos acima** instalados em seu ambiente de desenvolvimento.
 
