@@ -1,11 +1,5 @@
 <div align="center">
-  <h1>CRUD de Clientes</h1>
-  <img src="assets/image/icon48-windows.png" alt="Windows 11">
-  <img src="assets/image/icon48_java.png" alt="Java">
-  <img src="assets/image/icon48_spring.png" alt="Spring">
-  <img src="assets/image/icon48_h2database.png" alt="H2Database">
-  <img src="assets/image/icon48-intellij.png" alt="Intellij">
-  <img src="assets/image/icon48-postman.png" alt="Postman">
+  <h1><strong>CRUD de Clientes</strong></h1>
 </div>
 
 ## Índice
@@ -13,7 +7,7 @@
 - [Índice](#índice)
 - [Sobre o Projeto](#sobre-o-projeto)
   - [Principais Funcionalidades](#principais-funcionalidades)
-- [Pré-requisitos](#pré-requisitos)
+- [Tecnologias](#tecnologias)
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Ambientes de Execução](#ambientes-de-execução)
 - [Arquitetura e Camadas](#arquitetura-e-camadas)
@@ -47,6 +41,8 @@ public class Client {
 }
 ```
 
+[Voltar ao Índice](#índice)
+
 ### Principais Funcionalidades
 
 Este sistema foi desenvolvido com a finalidade de fornecer uma gestão eficaz de **clientes**, apresentando uma interface simples e direta para as operações de **Criação**, **Consulta**, **Atualização** e **Exclusão** (CRUD).
@@ -65,29 +61,34 @@ Abaixo estão as principais operações disponíveis no sistema:
 
 Essas operações compõem a base funcional do sistema, fornecendo uma interface de gerenciamento de clientes completa e eficiente. O design intuitivo e a aderência aos padrões da indústria garantem que o sistema seja fácil de usar e entender, seja para desenvolvedores ou usuários finais.
 
-## Pré-requisitos
+[Voltar ao Índice](#índice)
+
+## Tecnologias
 
 Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em sua máquina. Abaixo você tem a relação das tecnologias que foram utilizadas no processo de desenvolvimento do projeto.
 
-| Tecnologia                  | Versão              |
-| --------------------------- | ------------------- |
-| Sistema Operacional         | Windows 11          |
-| Linguagem de Programação    | Java 17 LTS (Azul Zulu) |
-| Framework                   | Spring Boot 3.1.0 (configurado via dependência pom.xml)  |
-| Banco de Dados              | H2 Database (configurado via dependência pom.xml)  |
-| IDE                         | IntelliJ IDEA 2023.1.2 (Community Edition) |
-| Ferramenta de Teste de API  | Postman v10.14.9    |
+| Tecnologia                  | Versão              | Logo |
+| --------------------------- | ------------------- | ---- |
+| Sistema Operacional         | Windows 11          | [![Windows](assets/image/icon48-windows.png)](https://www.microsoft.com/pt-br/windows/windows-11?r=1) |
+| Linguagem de Programação (JDK) | Java 17 LTS (Azul Zulu) | [![Java](assets/image/icon48_java.png)](https://www.azul.com/downloads/?package=jdk#zulu) |
+| Framework                   | Spring Boot 3.1.0   | [![Spring](assets/image/icon48_spring.png)](https://spring.io/projects/spring-boot) |
+| Banco de Dados              | H2 Database         | [![H2 Database](assets/image/icon48_h2database.png)](https://www.h2database.com/html/main.html) |
+| IDE                         | IntelliJ IDEA 2023.1.2 (Community Edition) | [![IntelliJ IDEA](assets/image/icon48-intellij.png)](https://www.jetbrains.com/idea/download/other.html) |
+| Ferramenta de Teste de API  | Postman v10.14.9    | [![Postman](assets/image/icon48-postman.png)](https://www.postman.com/downloads/) |
 
-Para instalar e executar este projeto, você precisa ter os pré-requisitos acima instalados em seu ambiente de desenvolvimento.
+Para instalar e executar este projeto, você precisa ter os **pré-requisitos acima** instalados em seu ambiente de desenvolvimento.
+
+[Voltar ao Índice](#índice)
 
 ## Diagrama de Classes
 
 Para entender a estrutura básica do projeto, consulte o diagrama de classes abaixo. O diagrama de classes fornece uma representação visual das classes envolvidas e suas interações, facilitando a compreensão do design do projeto.
 
 <div align="center">
-  <img src="assets/image/class-diagram.png" alt="Diagrama de Classes">
+  <img src="assets/image/class-diagram.png" alt="Diagrama de Classes" width="250" height="250">
 </div>
 
+[Voltar ao Índice](#índice)
 ## Ambientes de Execução
 
 Este projeto é configurado para ser executado em diferentes perfis, proporcionando flexibilidade e adaptabilidade para diferentes ambientes de desenvolvimento, testes, homologação e produção. No entanto, para fins de demonstração, foi utilizado o perfil **'test'**, especificamente configurado para utilizar o banco de dados em memória H2. Isso permite a criação de um ambiente de teste ágil, facilitando a validação das funcionalidades do aplicativo sem a necessidade de configuração adicional.
@@ -121,19 +122,23 @@ spring.jpa.properties.hibernate.format_sql=true
 
 Com essas configurações, você pode realizar testes rapidamente e ver as consultas SQL geradas, facilitando a identificação de possíveis problemas de desempenho ou comportamento inesperado. Para mais detalhes, veja a seção sobre [Acessando H2 Database](#acessando-h2-database).
 
+[Voltar ao Índice](#índice)
+
 ## Arquitetura e Camadas
 
 Este projeto foi desenvolvido seguindo a arquitetura em camadas e a organização padrão de pacotes sugerida pelo **Spring Boot**. Cada pacote tem uma responsabilidade distinta, permitindo uma separação clara das responsabilidades e facilitando a manutenção e expansão do código. A seguir, um breve resumo das responsabilidades de cada camada:
 
-- **entities**: Esta camada contém as classes de entidade que mapeiam diretamente para as tabelas do banco de dados. Essas classes são usadas pelo **Hibernate**, que é o provedor de **JPA** do **Spring Boot** para criar, recuperar, atualizar e excluir registros no banco de dados. Elas representam o estado e o comportamento das "**coisas**" do domínio do problema.
+- `entities`: Esta camada contém as classes de entidade que mapeiam diretamente para as tabelas do banco de dados. Essas classes são usadas pelo **Hibernate**, que é o provedor de **JPA** do **Spring Boot** para criar, recuperar, atualizar e excluir registros no banco de dados. Elas representam o estado e o comportamento das "**coisas**" do domínio do problema.
 
-- **dtos**: As classes **DTO** `Data Transfer Object` residem nesta camada. Elas são responsáveis por carregar dados entre processos ou entre o cliente e o servidor em uma arquitetura distribuída. Na aplicação elas são usadas para estruturar os dados que serão exibidos para o usuário, bem como para receber dados enviados pelo usuário.
+- `dtos`: As classes **DTO** `Data Transfer Object` residem nesta camada. Elas são responsáveis por carregar dados entre processos ou entre o cliente e o servidor em uma arquitetura distribuída. Na aplicação elas são usadas para estruturar os dados que serão exibidos para o usuário, bem como para receber dados enviados pelo usuário.
 
-- **services**: Esta camada inclui as classes de serviço que encapsulam a lógica de negócios do aplicativo. Elas funcionam como uma ponte entre os controladores e os repositórios, realizando operações e transformações complexas nos dados.
+- `services`: Esta camada inclui as classes de serviço que encapsulam a lógica de negócios do aplicativo. Elas funcionam como uma ponte entre os controladores e os repositórios, realizando operações e transformações complexas nos dados.
 
-- **controllers**: Aqui estão as classes de controladores, que funcionam como o ponto de entrada para todas as solicitações **HTTP**. Eles interagem com a camada de serviço para processar as solicitações e retornar as respostas adequadas ao *solicitante*. Em outras palavras, eles manipulam a comunicação entre o cliente e o servidor.
+- `controllers`: Aqui estão as classes de controladores, que funcionam como o ponto de entrada para todas as solicitações **HTTP**. Eles interagem com a camada de serviço para processar as solicitações e retornar as respostas adequadas ao *solicitante*. Em outras palavras, eles manipulam a comunicação entre o cliente e o servidor.
 
-- **repositories**: Esta camada inclui as `interfaces` de repositório, que fornecem uma abstração da persistência de dados. Eles são usados para operações de banco de dados, como consultas e atualizações. Graças ao `Spring Data JPA`, apenas a declaração da interface é necessária - a implementação é fornecida automaticamente pelo Spring.
+- `repositories`: Esta camada inclui as `interfaces` de repositório, que fornecem uma abstração da persistência de dados. Eles são usados para operações de banco de dados, como consultas e atualizações. Graças ao `Spring Data JPA`, apenas a declaração da interface é necessária - a implementação é fornecida automaticamente pelo Spring.
+
+[Voltar ao Índice](#índice)
 
 ## Arquitetura RESTful API
 
@@ -161,30 +166,35 @@ Entendi, você quer apenas uma tabela contendo o nome da tecnologia e o link par
 | --- | --- |
 | API REST | [https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api) |
 
+[Voltar ao Índice](#índice)
+
 ## Métodos de CRUD
 
 No contexto desta aplicação, foram implementadas operações fundamentais de persistência de dados, comumente conhecidas como operações CRUD (Create, Read, Update, Delete). Essas operações formam a espinha dorsal da interação do usuário com quaisquer dados persistentes no sistema e são essenciais para a maioria das aplicações de gerenciamento de dados.
 
 As operações são representadas da seguinte forma no protocolo `HTTP`:
 
-- **GET**: Essa requisição é utilizada para a leitura de dados. Temos duas operações principais implementadas: a `busca paginada de recursos`, que permite ao usuário navegar pelos dados de forma eficiente e escalonável, e a `busca de recurso por ID`, que recupera os detalhes de um recurso específico.
+- `GET`: Essa requisição é utilizada para a leitura de dados. Temos duas operações principais implementadas: a `busca paginada de recursos`, que permite ao usuário navegar pelos dados de forma eficiente e escalonável, e a `busca de recurso por ID`, que recupera os detalhes de um recurso específico.
 
-- **POST**: Esta requisição é utilizada para a criação de um novo recurso. O corpo da requisição HTTP contém os detalhes do recurso a ser criado. Após a criação bem-sucedida, a nova entidade é retornada na resposta.
+- `POST`: Esta requisição é utilizada para a criação de um novo recurso. O corpo da requisição HTTP contém os detalhes do recurso a ser criado. Após a criação bem-sucedida, a nova entidade é retornada na resposta.
 
-- **PUT**: Esta requisição é usada para a atualização de um recurso existente. Similar ao método POST, o corpo da requisição contém os novos detalhes do recurso. A aplicação então localiza o recurso existente e atualiza seus detalhes. 
-  - **OBSERVAÇÃO!** É importante destacar que o método PUT é **idempotente**, o que significa que independentemente do número de vezes que é feita uma requisição, o resultado será sempre o mesmo, desde que a mesma entrada seja fornecida. Isso garante a consistência das operações de atualização, pois uma atualização repetida terá o mesmo efeito que uma única atualização.
+- `PUT`: Esta requisição é usada para a atualização de um recurso existente. Similar ao método POST, o corpo da requisição contém os novos detalhes do recurso. A aplicação então localiza o recurso existente e atualiza seus detalhes. 
+  - `OBSERVAÇÃO!` É importante destacar que o método PUT é `idempotente`, o que significa que independentemente do número de vezes que é feita uma requisição, o resultado será sempre o mesmo, desde que a mesma entrada seja fornecida. Isso garante a consistência das operações de atualização, pois uma atualização repetida terá o mesmo efeito que uma única atualização.
 
-- **DELETE**: Esta requisição é usada para a remoção de um recurso. A aplicação localiza o recurso a ser removido e o exclui do banco de dados.
+- `DELETE`: Esta requisição é usada para a remoção de um recurso. A aplicação localiza o recurso a ser removido e o exclui do banco de dados.
 
 Cada uma dessas operações é adequadamente encapsulada em suas respectivas camadas de aplicação. Os controladores recebem as requisições HTTP e delegam para os serviços a execução das operações. Os serviços, por sua vez, interagem com os repositórios para a persistência dos dados.
 
 Essa estruturação respeita os princípios de uma arquitetura limpa, com uma separação clara das responsabilidades, promovendo a manutenibilidade e a escalabilidade do código.
+
+[Voltar ao Índice](#índice)
 
 ## Anotações Importantes
 
 As seguintes anotações são frequentemente usadas neste projeto:
 
 **Anotações JPA/Hibernate**
+
 | Anotação | Descrição |
 |---|---|
 | `@Entity` | Indica que a classe é uma entidade JPA e será mapeada para uma tabela no banco de dados. |
@@ -195,6 +205,7 @@ As seguintes anotações são frequentemente usadas neste projeto:
 | Anotações Hibernate | [Documentação](https://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/#d0e225) |
 
 **Anotações Spring MVC**
+
 | Anotação | Descrição |
 |---|---|
 | `@RestController` | Indica que a classe é um controlador e que seus métodos retornarão a resposta diretamente. |
@@ -208,6 +219,7 @@ As seguintes anotações são frequentemente usadas neste projeto:
 | Anotações Spring MVC | [Documentação](https://docs.spring.io/spring-framework/reference/testing/annotations.html) |
 
 **Anotações Spring Framework**
+
 | Anotação | Descrição |
 |---|---|
 | `@Transactional` | Indica que o método deve ser executado dentro de uma transação. |
@@ -216,6 +228,7 @@ As seguintes anotações são frequentemente usadas neste projeto:
 | Anotações Spring Framework | [Artigo](https://springframework.guru/spring-framework-annotations/) |
 
 **Anotações Bean Validation**
+
 | Anotação | Descrição |
 |---|---|
 | `@PastOrPresent` | Usada para validar se a data está no passado ou é a data atual. |
@@ -226,6 +239,7 @@ As seguintes anotações são frequentemente usadas neste projeto:
 | `@DecimalMin` | Verifica se o número decimal é maior que ou igual a um valor mínimo especificado. |
 | Anotações Bean Validation | [Documentação](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/) |
 
+[Voltar ao Índice](#índice)
 
 ## Tratamento de Exceções
 
@@ -235,11 +249,13 @@ O uso de **@ControllerAdvice** permite um tratamento centralizado de múltiplas 
 
 As classes de exceções tratadas podem ser categorizadas em dois grupos principais:
 
-- **Exceções do Lado Cliente**: Estas são geralmente o resultado de solicitações malformadas ou dados de usuário inválidos. São situações em que o cliente deve corrigir a solicitação antes de reenviá-la. Essas exceções são mapeadas para respostas de erro no intervalo de 4xx, indicando ao cliente que a solicitação não pode ser atendida devido a algum problema com os dados fornecidos.
+- `Exceções do Lado Cliente`: Estas são geralmente o resultado de solicitações malformadas ou dados de usuário inválidos. São situações em que o cliente deve corrigir a solicitação antes de reenviá-la. Essas exceções são mapeadas para respostas de erro no intervalo de 4xx, indicando ao cliente que a solicitação não pode ser atendida devido a algum problema com os dados fornecidos.
 
-- **Exceções do Lado Servidor**: Estas ocorrem quando há algum problema com o servidor ou com a lógica de negócio durante o processamento de uma requisição válida. Essas exceções são mapeadas para respostas de erro no intervalo de 5xx, indicando ao cliente que houve uma falha no servidor durante a manipulação da requisição.
+- `Exceções do Lado Servidor`: Estas ocorrem quando há algum problema com o servidor ou com a lógica de negócio durante o processamento de uma requisição válida. Essas exceções são mapeadas para respostas de erro no intervalo de 5xx, indicando ao cliente que houve uma falha no servidor durante a manipulação da requisição.
 
 Em ambos os casos, as mensagens de erro fornecem detalhes suficientes para diagnosticar a causa do problema, preservando ao mesmo tempo a segurança e a integridade da aplicação.
+
+[Voltar ao Índice](#índice)
 
 ## Validações
 
@@ -281,6 +297,8 @@ Neste exemplo, cada campo do DTO `ClientDTO` é anotado com validações. Quando
 
 Foi usado a especificação `Bean Validation` para validar os dados do lado do servidor.
 
+[Voltar ao Índice](#índice)
+
 ## Referências
 
 | Tópico | Link da Documentação |
@@ -291,6 +309,7 @@ Foi usado a especificação `Bean Validation` para validar os dados do lado do s
 | Como copiar dados da entity para o DTO? | [Artigo](https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application) |
 | Bean Validation | [Documentação](https://jakarta.ee/specifications/bean-validation/3.0/), [Documentação](https://jakarta.ee/specifications/bean-validation/3.0/apidocs/)|
 
+[Voltar ao Índice](#índice)
 
 ## Instalação
 
@@ -306,6 +325,8 @@ Através de sua IDE, navegue até o diretório do projeto `customers`, baixe as 
 cd AdvancedJavaTraining/customers
 ```
 
+[Voltar ao Índice](#índice)
+
 ## Acessando H2 Database
 
 Para acessar o console H2, digite o endereço `http://localhost:8080/h2-console` em seu navegador de internet.
@@ -313,8 +334,10 @@ Para acessar o console H2, digite o endereço `http://localhost:8080/h2-console`
 Na imagem abaixo você encontra as credenciais de acesso. Essas informações também podem ser encontradas no perfil de `test` na pasta `resources`. 
 
 <div align="center">
-  <img src="assets/image/h2-database.png" alt="Tela de Login do H2 Database">
+  <img src="assets/image/h2-database.png" alt="Tela de Login do H2 Database" width="560" height="450">
 </div>
+
+[Voltar ao Índice](#índice)
 
 ## Contribuição
 
@@ -326,13 +349,19 @@ Caso queira contribuir para este projeto, siga os seguintes passos:
 4. 'Push' para a 'Branch' (`git push origin feature/AmazingFeature`)
 5. Abra uma 'Pull Request'
 
+[Voltar ao Índice](#índice)
+
 ## Contato
 
 Se você tiver alguma dúvida relacionada ao projeto, entre em contato através do e-mail: solucao.erp@gmail.com.
 
+[Voltar ao Índice](#índice)
+
 ## Licença
 
 Este projeto está licenciado sob os termos da [Licença MIT](https://opensource.org/licenses/MIT). A Licença MIT é uma licença de software livre e de código aberto que permite o uso, a cópia, a modificação e a distribuição do código-fonte. Esta licença é notória por sua simplicidade e flexibilidade, incentivando a colaboração e a inovação no software de código aberto.
+
+[Voltar ao Índice](#índice)
 
 ---
 
