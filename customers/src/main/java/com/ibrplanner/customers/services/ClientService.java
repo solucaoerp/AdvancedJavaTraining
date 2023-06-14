@@ -49,7 +49,7 @@ public class ClientService {
     public ClientDTO update(Long id, ClientDTO clientDTO) {
         try {
             Client client = repository.getReferenceById(id);
-            BeanUtils.copyProperties(clientDTO, client);
+            copyDtoToEntity(clientDTO, client);
             client = repository.save(client);
             return new ClientDTO(client);
         } catch (EntityNotFoundException e) {
@@ -67,5 +67,13 @@ public class ClientService {
         } catch (DataIntegrityViolationException e) {
             throw new DatabaseException("Falha de integridade referencial");
         }
+    }
+
+    private void copyDtoToEntity(ClientDTO dto, Client entity) {
+        entity.setName(dto.getName());
+        entity.setCpf(dto.getCpf());
+        entity.setIncome(dto.getIncome());
+        entity.setBirthDate(dto.getBirthDate());
+        entity.setChildren(dto.getChildren());
     }
 }

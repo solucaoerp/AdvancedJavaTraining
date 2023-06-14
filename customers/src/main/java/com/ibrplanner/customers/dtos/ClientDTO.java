@@ -2,7 +2,6 @@ package com.ibrplanner.customers.dtos;
 
 import com.ibrplanner.customers.entities.Client;
 import jakarta.validation.constraints.*;
-import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.beans.BeanUtils;
 
 import java.time.LocalDate;
@@ -14,11 +13,11 @@ public class ClientDTO {
     @NotBlank(message = "O nome não pode ser vazio.")
     private String name;
 
-    @CPF(message = "O CPF informado não é válido.")
+    @NotBlank
     private String cpf;
 
     @NotNull
-    @DecimalMin("0.0")
+    @DecimalMin(value = "0.0", inclusive = false)
     private Double income;
 
     @NotNull
@@ -34,7 +33,7 @@ public class ClientDTO {
         BeanUtils.copyProperties(client, this);
     }
 
-    public ClientDTO(Long id, String name, String cpf, @NotNull Double income, @NotNull LocalDate birthDate, @NotNull Integer children) {
+    public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
