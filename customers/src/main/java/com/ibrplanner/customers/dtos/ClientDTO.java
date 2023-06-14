@@ -9,6 +9,8 @@ import java.time.LocalDate;
 
 public class ClientDTO {
 
+    private Long id;
+
     @NotBlank(message = "O nome não pode ser vazio.")
     private String name;
 
@@ -32,12 +34,21 @@ public class ClientDTO {
         BeanUtils.copyProperties(client, this);
     }
 
-    public ClientDTO(String name, String cpf, @NotNull Double income, @NotNull LocalDate birthDate, @NotNull Integer children) {
+    public ClientDTO(Long id, String name, String cpf, @NotNull Double income, @NotNull LocalDate birthDate, @NotNull Integer children) {
+        this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.income = income;
         this.birthDate = birthDate;
         this.children = children;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
