@@ -10,14 +10,16 @@ public class ClientDTO {
 
     private Long id;
 
-    @NotBlank(message = "O nome não pode ser vazio.")
+    @Size(min = 3, max = 80, message = "Nome precisa ter de 3 a 80 caracteres")
+    @NotBlank(message = "Campo requerido")
     private String name;
 
+    //@CPF
     @NotBlank
     private String cpf;
 
     @NotNull
-    @DecimalMin(value = "0.0", inclusive = false)
+    @Positive(message = "A renda deve ser positiva")
     private Double income;
 
     @NotNull

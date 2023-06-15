@@ -3,8 +3,8 @@ package com.ibrplanner.customers.services;
 import com.ibrplanner.customers.dtos.ClientDTO;
 import com.ibrplanner.customers.entities.Client;
 import com.ibrplanner.customers.repositories.ClientRepository;
-import com.ibrplanner.customers.services.exceptions.DatabaseException;
-import com.ibrplanner.customers.services.exceptions.ResourceNotFoundException;
+import com.ibrplanner.customers.services.exceptions.DatabaseServiceException;
+import com.ibrplanner.customers.services.exceptions.ResourceNotFoundServiceException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class ClientService {
 
     @Transactional(readOnly = true)
     public ClientDTO findById(Long id) {
-        Client client = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
+        Client client = repository.findById(id).orElseThrow(() -> new ResourceNotFoundServiceException("Recurso não encontrado"));
         return new ClientDTO(client);
     }
 
@@ -53,19 +53,19 @@ public class ClientService {
             client = repository.save(client);
             return new ClientDTO(client);
         } catch (EntityNotFoundException e) {
-            throw new ResourceNotFoundException("Recurso não encontrado");
+            throw new ResourceNotFoundServiceException("Recurso não encontrado");
         }
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
     public void delete(Long id) {
         if (!repository.existsById(id)) {
-            throw new ResourceNotFoundException("Recurso não encontrado");
+            throw new ResourceNotFoundServiceException("Recurso não encontrado");
         }
         try {
             repository.deleteById(id);
         } catch (DataIntegrityViolationException e) {
-            throw new DatabaseException("Falha de integridade referencial");
+            throw new DatabaseServiceException("Falha de integridade referencial");
         }
     }
 
