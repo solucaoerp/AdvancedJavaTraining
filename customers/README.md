@@ -2,24 +2,24 @@
   <h1><strong>CRUD de Clientes</strong></h1>
 </div>
 
-## **Índice**
+## Índice
 
-- [**Índice**](#índice)
-- [**Sobre**](#sobre)
-- [**Funcionalidades**](#funcionalidades)
+- [Índice](#índice)
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
   - [Para o Usuário](#para-o-usuário)
   - [Para o Desenvolvedor](#para-o-desenvolvedor)
   - [Operações](#operações)
   - [Diagrama de Classes](#diagrama-de-classes)
-- [**Tecnologias Utilizadas**](#tecnologias-utilizadas)
-- [**Instalação e Uso**](#instalação-e-uso)
-- [**Como Contribuir**](#como-contribuir)
-- [**Créditos**](#créditos)
-- [**Contato**](#contato)
-- [**Licença**](#licença)
-- [**Status do Projeto**](#status-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação e Uso](#instalação-e-uso)
+- [Como Contribuir](#como-contribuir)
+- [Créditos](#créditos)
+- [Contato](#contato)
+- [Licença](#licença)
+- [Status do Projeto](#status-do-projeto)
 
-## **Sobre**
+## Sobre
 
 Este projeto consiste em um CRUD de Clientes desenvolvido em `Java` com `Spring Boot`. O modelo de domínio **Client** básico, contém as seguintes propriedades:
 
@@ -39,7 +39,7 @@ public class Client {
 
 [Voltar ao Índice](#índice)
 
-## **Funcionalidades**
+## Funcionalidades
 
 ### Para o Usuário
 
@@ -73,7 +73,7 @@ Essas operações compõem a base funcional do sistema, fornecendo uma interface
 
 [Voltar ao Índice](#índice)
 
-## **Tecnologias Utilizadas**
+## Tecnologias Utilizadas
 
 Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em sua máquina. Abaixo você tem a relação das tecnologias que foram utilizadas no processo de desenvolvimento do projeto.
 
@@ -88,7 +88,7 @@ Antes de iniciar, assegure-se de ter o ambiente Java corretamente configurado em
 
 [Voltar ao Índice](#índice)
 
-## **Instalação e Uso**
+## Instalação e Uso
 
 Clone o repositório do Github:
 
@@ -125,7 +125,7 @@ Com essas configurações você poderá realizar testes rapidamente e ver as con
 
 [Voltar ao Índice](#índice)
 
-## **Como Contribuir**
+## Como Contribuir
 
 Contribuições são sempre bem-vindas! Se você tem uma sugestão que poderia melhorar este projeto, por favor, abra uma issue ou um pull request, seguindo os passos abaixo.
 
@@ -137,7 +137,7 @@ Contribuições são sempre bem-vindas! Se você tem uma sugestão que poderia m
 
 [Voltar ao Índice](#índice)
 
-## **Créditos**
+## Créditos
 
 | Referências | Acessos |
 |---|---|
@@ -155,19 +155,19 @@ Contribuições são sempre bem-vindas! Se você tem uma sugestão que poderia m
 
 [Voltar ao Índice](#índice)
 
-## **Contato**
+## Contato
 
 Se você tiver alguma dúvida, comentário ou sugestão, fique à vontade para abrir uma `issue` aqui no GitHub ou me contate diretamente através do e-mail: solucao.erp@gmail.com
 
 [Voltar ao Índice](#índice)
 
-## **Licença**
+## Licença
 
 Este projeto está licenciado sob os termos da [Licença MIT](https://opensource.org/licenses/MIT). A Licença MIT é uma licença de software livre e de código aberto que permite o uso, a cópia, a modificação e a distribuição do código-fonte. Esta licença é notória por sua simplicidade e flexibilidade, incentivando a colaboração e a inovação no software de código aberto.
 
 [Voltar ao Índice](#índice)
 
-## **Status do Projeto**
+## Status do Projeto
 
 Este README será atualizado conforme o projeto evolui. Fique ligado para novas funcionalidades e melhorias!
 
