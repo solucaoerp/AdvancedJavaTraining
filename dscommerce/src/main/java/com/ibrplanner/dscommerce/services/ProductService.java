@@ -1,7 +1,9 @@
 package com.ibrplanner.dscommerce.services;
 
+import com.ibrplanner.dscommerce.dtos.CategoryDTO;
 import com.ibrplanner.dscommerce.dtos.ProductDTO;
 import com.ibrplanner.dscommerce.dtos.ProductMinDTO;
+import com.ibrplanner.dscommerce.entities.Category;
 import com.ibrplanner.dscommerce.entities.Product;
 import com.ibrplanner.dscommerce.repositories.ProductRepository;
 import com.ibrplanner.dscommerce.services.exceptions.DatabaseException;
@@ -80,5 +82,15 @@ public class ProductService {
         entity.setDescription(dto.getDescription());
         entity.setPrice(dto.getPrice());
         entity.setImgUrl(dto.getImgUrl());
+
+        // limpa as categorias anteriores
+        entity.getCategories().clear();
+
+        // insere as categorias novas (objetos associados)
+        for (CategoryDTO catDTO : dto.getCategories()) {
+            Category cat = new Category();
+            cat.setId(catDTO.getId());
+            entity.getCategories().add(cat);
+        }
     }
 }
