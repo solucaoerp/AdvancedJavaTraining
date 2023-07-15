@@ -1,6 +1,7 @@
 package com.ibrplanner.dscommerce.controllers;
 
 import com.ibrplanner.dscommerce.dtos.ProductDTO;
+import com.ibrplanner.dscommerce.dtos.ProductMinDTO;
 import com.ibrplanner.dscommerce.services.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +32,11 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ProductDTO>> findAll(
+    public ResponseEntity<Page<ProductMinDTO>> findAll(
             @RequestParam(name = "name", defaultValue = "") String name,
             Pageable pageable) {
 
-        Page<ProductDTO> dto = productService.findAll(name, pageable);
+        Page<ProductMinDTO> dto = productService.findAll(name, pageable);
         return ResponseEntity.ok(dto);
     }
 

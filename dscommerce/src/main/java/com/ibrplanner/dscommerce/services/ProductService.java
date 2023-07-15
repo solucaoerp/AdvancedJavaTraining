@@ -1,6 +1,7 @@
 package com.ibrplanner.dscommerce.services;
 
 import com.ibrplanner.dscommerce.dtos.ProductDTO;
+import com.ibrplanner.dscommerce.dtos.ProductMinDTO;
 import com.ibrplanner.dscommerce.entities.Product;
 import com.ibrplanner.dscommerce.repositories.ProductRepository;
 import com.ibrplanner.dscommerce.services.exceptions.DatabaseException;
@@ -31,11 +32,11 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true)
-    public Page<ProductDTO> findAll(String name, Pageable pageable) {
+    public Page<ProductMinDTO> findAll(String name, Pageable pageable) {
         Page<Product> products = productRepository.searchByName(name, pageable);// findAll(pageable);
 
         // conversao com LAMBDA Expression
-        return products.map(x -> new ProductDTO(x));
+        return products.map(ProductMinDTO::new);
     }
 
     @Transactional
