@@ -28,11 +28,17 @@ public class OrderService {
     @Autowired
     private OrderItemRepository orderItemRepository;
 
+    @Autowired
+    private AuthService authService;
+
     @Transactional(readOnly = true)
     public OrderDTO findById(Long id) {
 
         Order order = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
+
+        // corta a execução e para caso não seja o usuário logado ou Admin
+        authService.validateSelfOrAdmin(order.getClient().getId());
 
         return new OrderDTO(order);
     }
@@ -47,7 +53,7 @@ public class OrderService {
         User user = userService.authenticated();
         order.setClient(user);
 
-        for (OrderItemDTO itemDTO : dto.getItems()){
+        for (OrderItemDTO itemDTO : dto.getItems()) {
             Product product = productRepository.getReferenceById(itemDTO.getProductId());
             OrderItem orderItem = new OrderItem(order, product, itemDTO.getQuantity(), product.getPrice());
             order.getItems().add(orderItem);
